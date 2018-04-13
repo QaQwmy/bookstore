@@ -207,12 +207,16 @@ def order_pay(request):
 	except OrderInfo.DoesNotExist:
 		return JsonResponse({'res':2,'errmsg':'订单信息出错'})
 
+	app_private_key_path = os.path.join(settings.BASE_DIR, 'order/app_private_key.pem')
+	alipay_public_key_path = os.path.join(settings.BASE_DIR, 'order/app_public_key.pem')
+	app_private_key_string = open(app_private_key_path).read()
+	alipay_public_key_string = open(alipay_public_key_path).read()
 	# 和支付宝进行交互
 	alipay = AliPay(
 		appid="2016091500515408",  # 应用id
 		app_notify_url=None,  # 默认回调url
-		app_private_key_path=os.path.join(settings.BASE_DIR, 'order/app_private_key.pem'),
-		alipay_public_key_path=os.path.join(settings.BASE_DIR, 'order/app_alipay_public_key.pem'),
+		app_private_key_string=app_private_key_string,
+		alipay_public_key_string=alipay_public_key_string,
 		# 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
 		sign_type="RSA2",  # RSA 或者 RSA2
 		debug=True,  # 默认False
@@ -242,7 +246,7 @@ def check_pay(request):
 	passport_id = request.POST.get('passport_id')
 	#接受订单id
 	order_id = request.POST.get('order_id')
-
+	print(order_id)
 	#数据校验
 	if not order_id:
 		return JsonResponse({'res':1,'errmsg':'订单不存在'})
@@ -255,8 +259,8 @@ def check_pay(request):
 		)
 	except OrderInfo.DoesNotExist:
 		return JsonResponse({'res':2,'errmsg':'订单信息出错'})
-	app_private_key_path = os.path.join(settings.BASE_DIR, 'df_order/app_private_key.pem')
-	alipay_public_key_path = os.path.join(settings.BASE_DIR, 'df_order/alipay_public_key.pem')
+	app_private_key_path = os.path.join(settings.BASE_DIR, 'order/app_private_key.pem')
+	alipay_public_key_path = os.path.join(settings.BASE_DIR, 'order/app_public_key.pem')
 	app_private_key_string = open(app_private_key_path).read()
 	alipay_public_key_string = open(alipay_public_key_path).read()
 #和支付宝进行交互

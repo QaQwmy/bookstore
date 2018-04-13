@@ -43,7 +43,7 @@
 							</td>
 							<td width="15%">{{ order.total_price }}元</td>
 							<td width="15%">{{ order.status | order_status }}</td>
-							<td width="15%"><a href="#" pay_method="{{ order.pay_method }}" order_id = "{{ order.order_id }}" class="oper_btn">去付款</a></td>
+							<td width="15%"><a href="#" pay_method="{{ order.pay_method }}" order_id = "{{ order.order_id }}"  order_status="{{ order.status }}" class="oper_btn">去付款</a></td>
 						</tr>
 					</tbody>
 				</table>
@@ -51,7 +51,7 @@
 
 
 				<div class="pagenation">
-					<a href="#"><上一页</a>
+					<a href="#">上一页</a>
 					<a href="#" class="active">1</a>
 					<a href="#">2</a>
 					<a href="#">3</a>
@@ -68,22 +68,22 @@
         $(function () {
             $('.oper_btn').click(function () {
                 //获取订单id和订单的状态
-                order_id = $(this).attr('order_id')
-                order_status = $(this).attr('order_status')
-                csrf = $('input[name="csrfmiddlewaretoken"]').val()
+                order_id = $(this).attr('order_id');
+                order_status = $(this).attr('order_status');
+                csrf = $('input[name="csrfmiddlewaretoken"]').val();
                 params = {
                     'order_id':order_id,
-                    'csrfmiddlewaretoken':csrf,
-                }
+                    'csrfmiddlewaretoken':csrf
+                };
                 if (order_status == 1) {
                     $.post('/order/pay/',params,function (data) {
                       if (data.res == 3) {
                           //把用户引导支付页面
-                          window.open(data.pay_url)
+                          window.open(data.pay_url);
                           //查询用户的支付结果
                           $.post('/order/check_pay/',params,function (data) {
                               if (data.res == 3) {
-                                  alert('支付成功')
+                                  alert('支付成功');
                                   //重新刷新页面
                                   location.reload()
                               }
