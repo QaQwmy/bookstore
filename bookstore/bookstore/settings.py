@@ -26,7 +26,7 @@ SECRET_KEY = '!4k)67@@+hf58ar%-0r#0bgmdvok(7ns4q=y8a#gej&3+xu@-s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -153,14 +153,14 @@ ALIPAY_URL='https://openapi.alipaydev.com/gateway.do'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 25
-
+EMAIL_PORT = 465
+EMAIL_USE_SSL=True
 # 发送邮件的邮箱
-EMAIL_HOST_USER = 'zhang173175001@163.com'
+EMAIL_HOST_USER = '18732429547@163.com'
 # 在邮箱中设置的客户端授权密码
-EMAIL_HOST_PASSWORD = '173175001zhang'
+EMAIL_HOST_PASSWORD = 'yu1028'
 # 收件人看到的发件人
-EMAIL_FROM = 'shangguigu<zhang173175001@163.com>'
+EMAIL_FROM = 'shangguigu<18732429547@163.com>'
 
 
 
@@ -180,4 +180,4 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6 # 指定搜索结果每页的条数
 
-
+STATIC_ROOT = os.path.join(BASE_DIR,'collect_static')

@@ -1,0 +1,198 @@
+[2018-04-13 18:34:21 +0000] [8433] [INFO] Starting gunicorn 19.7.1
+[2018-04-13 18:34:21 +0000] [8433] [INFO] Listening at: http://0.0.0.0:8000 (8433)
+[2018-04-13 18:34:21 +0000] [8433] [INFO] Using worker: sync
+[2018-04-13 18:34:21 +0000] [8437] [INFO] Booting worker with pid: 8437
+[2018-04-13 18:34:21 +0000] [8437] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 18:34:21 +0000] [8437] [INFO] Worker exiting (pid: 8437)
+[2018-04-13 18:34:21 +0000] [8433] [INFO] Shutting down: Master
+[2018-04-13 18:34:21 +0000] [8433] [INFO] Reason: Worker failed to boot.
+[2018-04-13 18:36:41 +0000] [8477] [INFO] Starting gunicorn 19.7.1
+[2018-04-13 18:36:41 +0000] [8477] [INFO] Listening at: http://0.0.0.0:8000 (8477)
+[2018-04-13 18:36:41 +0000] [8477] [INFO] Using worker: sync
+[2018-04-13 18:36:41 +0000] [8481] [INFO] Booting worker with pid: 8481
+[2018-04-13 18:36:41 +0000] [8481] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 18:36:41 +0000] [8481] [INFO] Worker exiting (pid: 8481)
+[2018-04-13 18:36:41 +0000] [8477] [INFO] Shutting down: Master
+[2018-04-13 18:36:41 +0000] [8477] [INFO] Reason: Worker failed to boot.
+[2018-04-13 18:41:51 +0000] [8504] [INFO] Starting gunicorn 19.7.1
+[2018-04-13 18:41:51 +0000] [8504] [INFO] Listening at: http://0.0.0.0:8000 (8504)
+[2018-04-13 18:41:51 +0000] [8504] [INFO] Using worker: sync
+[2018-04-13 18:41:51 +0000] [8508] [INFO] Booting worker with pid: 8508
+[2018-04-13 18:41:51 +0000] [8508] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 18:41:51 +0000] [8508] [INFO] Worker exiting (pid: 8508)
+[2018-04-13 18:41:51 +0000] [8504] [INFO] Shutting down: Master
+[2018-04-13 18:41:51 +0000] [8504] [INFO] Reason: Worker failed to boot.
+[2018-04-13 19:05:50 +0000] [9187] [INFO] Starting gunicorn 19.7.1
+[2018-04-13 19:05:50 +0000] [9187] [INFO] Listening at: http://0.0.0.0:8000 (9187)
+[2018-04-13 19:05:50 +0000] [9187] [INFO] Using worker: sync
+[2018-04-13 19:05:50 +0000] [9191] [INFO] Booting worker with pid: 9191
+[2018-04-13 19:05:50 +0000] [9191] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 19:05:50 +0000] [9191] [INFO] Worker exiting (pid: 9191)
+[2018-04-13 19:05:50 +0000] [9192] [INFO] Booting worker with pid: 9192
+[2018-04-13 19:05:50 +0000] [9192] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 19:05:50 +0000] [9192] [INFO] Worker exiting (pid: 9192)
+[2018-04-13 19:05:50 +0000] [9193] [INFO] Booting worker with pid: 9193
+[2018-04-13 19:05:50 +0000] [9193] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 19:05:50 +0000] [9193] [INFO] Worker exiting (pid: 9193)
+[2018-04-13 19:05:50 +0000] [9187] [INFO] Shutting down: Master
+[2018-04-13 19:05:50 +0000] [9187] [INFO] Reason: Worker failed to boot.
+[2018-04-13 19:12:37 +0000] [9239] [INFO] Starting gunicorn 19.7.1
+[2018-04-13 19:12:37 +0000] [9239] [INFO] Listening at: http://0.0.0.0:8000 (9239)
+[2018-04-13 19:12:37 +0000] [9239] [INFO] Using worker: sync
+[2018-04-13 19:12:37 +0000] [9243] [INFO] Booting worker with pid: 9243
+[2018-04-13 19:12:37 +0000] [9243] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-13 19:12:37 +0000] [9243] [INFO] Worker exiting (pid: 9243)
+[2018-04-13 19:12:37 +0000] [9239] [INFO] Shutting down: Master
+[2018-04-13 19:12:37 +0000] [9239] [INFO] Reason: Worker failed to boot.
+[2018-04-14 10:16:28 +0000] [10505] [INFO] Starting gunicorn 19.7.1
+[2018-04-14 10:16:28 +0000] [10505] [INFO] Listening at: http://0.0.0.0:8000 (10505)
+[2018-04-14 10:16:28 +0000] [10505] [INFO] Using worker: sync
+[2018-04-14 10:16:28 +0000] [10509] [INFO] Booting worker with pid: 10509
+[2018-04-14 10:16:28 +0000] [10509] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/usr/local/lib/python2.7/dist-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/root/work/bookstore/bookstore/__init__.py", line 4, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-14 10:16:28 +0000] [10509] [INFO] Worker exiting (pid: 10509)
+[2018-04-14 10:16:28 +0000] [10505] [INFO] Shutting down: Master
+2018-04-14 10:16:28 +0000] [10505] [INFO] Reason: Worker failed to boot.
